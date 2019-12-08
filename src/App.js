@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Route, BrowserRouter, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import './main.css';
+import Navbar from './Navbar.jsx';
+import Home from './Home.jsx';
+import ChaletDescription from './ChaletDescription.jsx';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  renderHome = () => {
+    return <Home chalets={this.props.chalets} />;
+  };
+  renderChalet = (routerData) => {
+    console.log('rendering chalet...');
+    const chaletId = Number(routerData.match.params.chaletId);
+    const chalet = this.props.chalets.find((chalet) => chalet.id === chaletId);
+    return <ChaletDescription chalet={chalet} />;
+  };
+
+  render() {
+    return (
+      <BrowserRouter>
+        <Navbar />
+        <div>
+          <Route exact={true} path="/" render={this.renderHome} />
+          <Route
+            exact={true}
+            path="/chalet/:chaletId"
+            render={this.renderChalet}
+          />
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return { chalets: state.chalets };
+};
+export default connect(mapStateToProps)(App);
