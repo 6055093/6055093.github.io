@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
+
+const video = require('./images/Snow-motion.mp4');
 
 class Atf extends Component {
   constructor(props) {
@@ -9,6 +11,9 @@ class Atf extends Component {
   render() {
     return (
       <div className="atf-container">
+        <video autoPlay muted loop id="myVideo">
+          <source src={video} type="video/mp4" />
+        </video>
         <div className="atf-sub-container">
           <h1 className="slogan">
             Le chalet de vos rêves
@@ -19,9 +24,9 @@ class Atf extends Component {
             <br /> et 2 minutes du Golf. Parfait pour les familles et
             <br /> les petits groupes de vacanciers sportifs.
           </h2>
-          <Link href="#chalets" className="cta-button">
+          <NavLink to={'#chalets'} className="cta-button">
             Voir les chalets
-          </Link>
+          </NavLink>
         </div>
       </div>
     );

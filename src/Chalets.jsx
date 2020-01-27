@@ -11,7 +11,9 @@ class Chalets extends Component {
     return (
       <div className="chalets-container" id="chalets">
         <div className="chalet-section">
-          <img src={this.props.gallery[0].src} className="img-container" />
+          <div className="img-container">
+            <img src={this.props.gallery[0].original} className="chalet-img" />
+          </div>
           <div className="chalet-description-container">
             <h3 className="chalet-title">{this.props.title}</h3>
             <p className="chalet-description">{this.props.description}</p>

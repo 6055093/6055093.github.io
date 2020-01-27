@@ -1,33 +1,47 @@
+@import '~react-image-gallery/styles/css/image-gallery.css';
+
 html {
   scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
 }
 body {
   margin: 0;
   font-family: Ubuntu;
-  /* margin-top: 50px; */
+  background-color: rgb(245, 243, 243);
 }
-
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
 .navbar {
   display: flex;
-  /* align-items: center; */
-  justify-content: start;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+}
+.navbar-wrapper {
+  display: flex;
   width: 100%;
+  position: relative;
   background-color: white;
-  height: 10vh;
-  position: fixed;
+  height: 75px;
   z-index: 99;
-  /* margin-bottom: 15vw; */
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
 }
 .nav-logo-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2vw;
-  padding-left: 18vw;
+  justify-content: flex-start;
+  padding: 25px;
 }
 .nav-logo-img {
-  height: 2.5vw;
+  height: 30px;
   transition: opacity 0.3s ease-in-out;
 }
 .nav-logo-img:hover {
@@ -37,24 +51,50 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2vw;
-  padding-left: 16vw;
+  justify-content: flex-end;
+  padding: 25px;
 }
 .nav-links {
   padding: 25px;
-  font-size: 1vw;
+  font-size: 13px;
   text-decoration: none;
   color: black;
 }
+.nav-button {
+  display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  margin: none;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  background-color: rgba(241, 111, 68, 1);
+  color: white;
+  text-align: center;
+  transition: all 0.2s;
+  font-size: 13px;
+  font-weight: 600;
+}
+.nav-button:hover {
+  color: white;
+  background-color: black;
+}
 .atf-container {
-  background-image: url('./images/bright-color-dark-2170232.jpg');
+  /* background-image: url('./images/Window-Snow.mp4'); */
   background-size: cover;
   height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 .atf-sub-container {
   display: flex;
@@ -63,22 +103,22 @@ body {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   color: white;
   text-align: center;
   padding: 25px;
-  margin-top: 3vw;
-  font-size: 1.4vw;
+  font-size: 17px;
+  z-index: 97;
+  position: absolute;
+  top: 0;
 }
 .slogan {
-  /* padding-left: 55px; */
   margin-bottom: 0;
   font-weight: bolder;
   margin-bottom: 20px;
 }
 .sub-slogan {
-  font-size: 1.2vw;
-  /* padding-left: 55px; */
+  font-size: 13px;
   margin-top: 10px;
   font-weight: lighter;
   line-height: 1.5;
@@ -112,9 +152,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
   margin-top: 4vw;
+  margin-bottom: 1vw;
 }
 .feature-container {
   display: flex;
@@ -122,27 +163,28 @@ body {
   align-items: center;
   flex-direction: column;
   width: 50%;
-  height: 15vw;
-  margin: 1.9vw;
+  height: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
-  /* border: 0.8px solid black; */
   border-top: none;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 0.12em;
-  padding: 1vw;
+  padding: 10px;
+  background-color: rgba(250, 250, 250, 0.966);
 }
 .feature-icon {
   height: auto;
   width: auto;
-  max-height: 3vw;
-  max-width: 3vw;
+  max-height: 30px;
+  max-width: 30px;
 }
 .feature-title {
   font-weight: bold;
-  font-size: 1.3vw;
+  font-size: 15px;
 }
 .feature-description {
-  font-size: 1vw;
+  font-size: 11px;
   line-height: 1.5;
 }
 .chalets-container {
@@ -151,72 +193,55 @@ body {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 70%;
+  width: 75%;
   height: auto;
   margin: 0 auto;
-  /* display: grid;
-  grid-template-rows: 29vw 29vw 29vw 29vw;
-  grid-template-columns: 1fr; */
 }
 .chalet-section {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  /* padding: 25px; */
-  width: auto;
-  margin: 3vw auto;
+  width: 100%;
+  height: 45vh;
+  margin: 30px auto;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: rgba(250, 250, 250, 0.966);
 }
 .img-container {
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  z-index: 10;
+  max-width: 60%;
   height: 100%;
+  text-align: center;
+}
+.chalet-img {
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.paradis {
-  background-image: url('./images/Chalet-Vu-de-loin.jpg');
-}
-.paradis2 {
-  background-image: url('./images/Exterieur-et-foyer-vue-de-soir.jpg');
-}
-.aventurier {
-  background-image: url('./images/Chambre-rez-de-chausse.jpg');
-}
-.paresseux {
-  background-image: url('./images/Vue-sur-le-salon.jpg');
+  height: 100%;
+  object-fit: cover;
 }
 .chalet-description-container {
   padding: 0;
   padding-top: 5vh;
   margin: 0;
-  margin-left: 4vw;
-  margin-right: 4vw;
+  margin-left: 40px;
+  margin-right: 40px;
   height: 100%;
-  width: 33%;
+  width: auto;
   text-align: justify;
-  /* border-top: 1px solid black; */
 }
 
 .chalet-title {
   font-weight: bolder;
-  font-size: 1.5vw;
+  font-size: 17px;
   margin-top: 0;
 }
 .chalet-description {
   line-height: 1.5;
-  font-size: 1vw;
+  font-size: 11px;
 }
 .cta-chalet-button {
   display: inline-block;
-  padding: 0.5vw 1vw;
+  padding: 8px 13px;
   border: 0.1em solid black;
-  /* background-color: #ef5c2c; */
-  margin: 1vw 0em 0em 0px;
+  margin: 10px 0em 0em 0px;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
@@ -224,7 +249,7 @@ body {
   color: black;
   text-align: center;
   transition: all 0.2s;
-  font-size: 1.1vw;
+  font-size: 13px;
 }
 .cta-chalet-button:hover {
   color: white;
@@ -237,9 +262,9 @@ body {
   flex-direction: row;
   width: 100%;
   height: 60vh;
-  margin: 3vw auto;
-  background-color: rgba(241, 111, 68, 0.1);
-  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); */
+  margin: 0 auto;
+  margin-bottom: 0;
+  background-color: rgba(241, 111, 68, 0.048);
 }
 .about-us-description-container {
   display: flex;
@@ -248,8 +273,7 @@ body {
   flex-direction: column;
   width: 75%;
   height: 40vh;
-  margin: 3vw auto;
-  padding: 25px;
+  margin: 0 auto;
 }
 .about-us-img-container {
   position: relative;
@@ -258,26 +282,698 @@ body {
   background-image: url('./images/Nath&Eric.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  width: 14vw;
-  height: 15vw;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   float: right;
-  margin: 20px;
+  margin-left: 20px;
   margin-top: 0;
   margin-right: 0;
 }
 .about-us-description {
   line-height: 1.5;
-  font-size: 1vw;
-  /* padding-top: 25px; */
-  margin-right: 50px;
-  margin-left: 50px;
+  font-size: 13px;
   padding-bottom: 25px;
   text-align: justify;
 }
 .about-us-title {
-  font-size: 1.5vw;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   margin: 25px;
 }
+.contact-wrapper {
+  width: 75%;
+  height: 250px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+.contact-head {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.contact-info {
+  display: block;
+  text-align: left;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 33%;
+}
+.contact-map {
+  width: 70%;
+}
+.chalet-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 5vh;
+}
+.chalet-page-wrapper {
+  width: 100%;
+}
+.chalet-page-atf-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 75%;
+  margin: 0 auto;
+}
+.chalet-description-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.chlt-desc-title-wrap {
+  display: inline;
+}
+.chlt-desc-btn-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.chalet-description-button {
+  display: inline-block;
+  padding: 1vw 1.5vw;
+  border: none;
+  margin: 1vw 0em 0em 0px;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  background-color: rgba(241, 111, 68, 1);
+  color: white;
+  text-align: center;
+  transition: all 0.2s;
+  font-size: 1.1vw;
+  font-weight: 600;
+}
+.chalet-description-button a {
+  color: white;
+}
+.chalet-description-button:hover {
+  color: white;
+  background-color: black;
+}
+.gallery-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 55%;
+}
+.gallery-container {
+  text-align: flex-start;
+  height: 100%;
+  width: 100%;
+}
+.image-gallery-slide-wrapper.right {
+  width: auto;
+}
+.image-gallery-slide-wrapper.left {
+  width: auto;
+}
+
+.chalet-page-description-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: auto;
+  height: 400px;
+}
+.chalet-page-specs-wrapper {
+  min-width: 45%;
+  background-color: rgba(250, 250, 250, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chalet-description-specs {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+}
+.image-gallery:fullscreen {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100vh !important;
+}
+.image-gallery-content:fullscreen {
+  width: 100%;
+  height: 100%;
+}
+
+.image-gallery-slide {
+  height: 100%;
+  width: 100%;
+}
+.image-gallery-slide img {
+  height: 400px;
+}
+.image-gallery-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: black;
+}
+.image-gallery-image img {
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: fill;
+}
+.image-gallery-thumbnail {
+  margin: 0;
+}
+.chalet-page-description-wrapper {
+  width: 100%;
+  background-color: rgba(250, 250, 250, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  padding-bottom: 15px;
+}
+.chalet-page-description {
+  width: 75%;
+}
+.chalet-page-description h2 {
+  text-align: center;
+}
+.chalet-page-description p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+.icon-class-name {
+  margin: 0 10px;
+  line-height: 1.5;
+}
+.spec-icons {
+  display: flex;
+  align-items: center;
+}
+h3 {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/*-----------------------------------Tablet mode CSS Start--------------------------------*/
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .navbar-wrapper {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    height: 75px;
+    /* position: fixed; */
+    z-index: 99;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+  }
+  .nav-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px;
+  }
+  .nav-logo-img {
+    height: 30px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .nav-logo-img:hover {
+    opacity: 0.7;
+  }
+  .nav-links-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 25px;
+  }
+  .nav-links {
+    padding: 25px;
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+  }
+  .nav-button {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    margin: none;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    background-color: rgba(241, 111, 68, 1);
+    color: white;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .nav-button:hover {
+    color: white;
+    background-color: black;
+  }
+  .atf-container {
+    /* background-image: url('./images/bright-color-dark-2170232.jpg'); */
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .atf-sub-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 17px;
+  }
+  .slogan {
+    margin-bottom: 0;
+    font-weight: bolder;
+    margin-bottom: 20px;
+  }
+  .sub-slogan {
+    font-size: 13px;
+    margin-top: 10px;
+    font-weight: lighter;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  .cta-button {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #ffffff;
+    margin: 0 0.3em 0.3em 0px;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .cta-button:hover {
+    color: #000000;
+    background-color: #ffffff;
+  }
+  @media all and (max-width: 30em) {
+    .cta-button {
+      display: block;
+      margin: 0.4em auto;
+    }
+  }
+  .features-section-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 4vw;
+    margin-bottom: 1vw;
+  }
+  .feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-top: none;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 0.12em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(250, 250, 250, 0.966);
+  }
+  .feature-icon {
+    height: auto;
+    width: auto;
+    max-height: 50px;
+    max-width: 50px;
+  }
+  .feature-title {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .feature-description {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .chalets-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .chalet-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    margin: 30px auto;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: rgba(250, 250, 250, 0.966);
+  }
+  .img-container {
+    min-width: 100%;
+    height: auto;
+  }
+  .chalet-img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+  }
+  .chalet-description-container {
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    margin-left: 40px;
+    margin-right: 40px;
+    min-height: 40%;
+    width: auto;
+    text-align: justify;
+  }
+
+  .chalet-title {
+    font-weight: bolder;
+    font-size: 17px;
+    margin-top: 0;
+  }
+  .chalet-description {
+    line-height: 1.5;
+    font-size: 11px;
+  }
+  .cta-chalet-button {
+    display: inline-block;
+    padding: 8px 13px;
+    border: 0.1em solid black;
+    margin: 10px 0em 0em 0px;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 13px;
+  }
+  .cta-chalet-button:hover {
+    color: white;
+    background-color: black;
+  }
+  .about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: auto;
+    height: 60vh;
+    margin: 0 auto;
+    margin-bottom: 0;
+    background-color: rgba(241, 111, 68, 0.048);
+  }
+  .about-us-description-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .about-us-img-container {
+    position: relative;
+  }
+  .about-us-img {
+    background-image: url('./images/Nath&Eric.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    float: right;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .about-us-description {
+    line-height: 1.5;
+    font-size: 10px;
+    padding-bottom: 25px;
+    text-align: justify;
+  }
+  .about-us-title {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin: 25px;
+  }
+  .contact-wrapper {
+    width: 75%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .contact-head {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    height: 200px;
+    width: 33%;
+  }
+  .contact-map {
+    width: 100%;
+  }
+  .chalet-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 5vh;
+  }
+  .chalet-page-wrapper {
+    width: 100%;
+  }
+  .chalet-page-atf-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .chalet-description-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .chlt-desc-title-wrap {
+    display: inline;
+  }
+  .chlt-desc-btn-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .chalet-description-button {
+    display: inline-block;
+    padding: 20px 30px;
+    border: none;
+    margin: 1vw 0em 0em 0px;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    background-color: rgba(241, 111, 68, 1);
+    color: white;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .chalet-description-button a {
+    color: white;
+  }
+  .chalet-description-button:hover {
+    color: white;
+    background-color: black;
+  }
+  .gallery-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 75%;
+  }
+  .gallery-container {
+    text-align: flex-start;
+    height: 100%;
+    width: 100%;
+  }
+  .image-gallery-slide-wrapper.right {
+    width: auto;
+  }
+  .image-gallery-slide-wrapper.left {
+    width: auto;
+  }
+
+  .chalet-page-description-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    max-height: 80%;
+    max-width: 80%;
+    text-align: justify;
+  }
+  .chalet-page-specs-wrapper {
+    max-width: 75%;
+    background-color: rgba(250, 250, 250, 1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 400px;
+    width: 100%;
+  }
+  .chalet-description-specs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .image-gallery:fullscreen {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100vh !important;
+  }
+  .image-gallery-content:fullscreen {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-gallery-slide {
+    height: 100%;
+    width: 100%;
+  }
+  .image-gallery-slide img {
+    height: 400px;
+  }
+  .image-gallery-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: black;
+  }
+  .image-gallery-image img {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: fill;
+  }
+  .image-gallery-thumbnail {
+    margin: 0;
+  }
+  .chalet-page-description-wrapper {
+    width: 100%;
+    background-color: rgba(250, 250, 250, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    padding-bottom: 15px;
+  }
+  .chalet-page-description {
+    width: 75%;
+  }
+  .chalet-page-description h2 {
+    text-align: center;
+  }
+  .chalet-page-description p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .icon-class-name {
+    margin: 0 10px;
+    line-height: 1.5;
+  }
+  .spec-icons {
+    display: flex;
+    align-items: center;
+  }
+  .spec-icons span {
+    /* font-size: 5px; */
+  }
+
+  h3 {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+}
+/*-----------------------------------Tablet mode CSS End--------------------------------*/

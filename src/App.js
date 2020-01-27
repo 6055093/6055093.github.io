@@ -5,6 +5,7 @@ import './main.css';
 import Navbar from './Navbar.jsx';
 import Home from './Home.jsx';
 import ChaletDescription from './ChaletDescription.jsx';
+import Contact from './Contact.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -14,10 +15,10 @@ class App extends Component {
   renderHome = () => {
     return <Home chalets={this.props.chalets} />;
   };
-  renderChalet = (routerData) => {
+  renderChalet = routerData => {
     console.log('rendering chalet...');
     const chaletId = Number(routerData.match.params.chaletId);
-    const chalet = this.props.chalets.find((chalet) => chalet.id === chaletId);
+    const chalet = this.props.chalets.find(chalet => chalet.id === chaletId);
     return <ChaletDescription chalet={chalet} />;
   };
 
@@ -33,12 +34,13 @@ class App extends Component {
             render={this.renderChalet}
           />
         </div>
+        <Contact />
       </BrowserRouter>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return { chalets: state.chalets };
 };
 export default connect(mapStateToProps)(App);

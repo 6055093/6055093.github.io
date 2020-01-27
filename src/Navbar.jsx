@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 class Navbar extends Component {
   constructor(props) {
@@ -9,23 +9,31 @@ class Navbar extends Component {
   render() {
     return (
       <>
-        <div className="navbar">
-          <div className="nav-logo-container">
-            <img
-              className="nav-logo-img"
-              src={require('./images/Logo-250px.png')}
-            />
-          </div>
-          <div className="nav-links-container">
-            <a className="nav-links" href="#chalets" to="/">
-              Les Chalets
-            </a>
-            <a className="nav-links" href="#a-propos">
-              À propos
-            </a>
-            <a className="nav-links" href="#">
-              Contact
-            </a>
+        <div id="top" className="navbar-wrapper">
+          <div className="navbar">
+            <div className="nav-logo-container">
+              <NavLink to={'/#top'}>
+                <img
+                  className="nav-logo-img"
+                  src={require('./images/Logo-250px.png')}
+                  onClick={this.scrollToTop}
+                />
+              </NavLink>
+            </div>
+            <div className="nav-links-container">
+              <NavLink className="nav-links" to={'/#chalets'}>
+                Les Chalets
+              </NavLink>
+              <NavLink className="nav-links" to={'/#a-propos'}>
+                À propos
+              </NavLink>
+              <NavLink className="nav-links" to={'/#contact'}>
+                Contact
+              </NavLink>
+              <a className="nav-links nav-button" href="tel:+15149232335">
+                514-923-2335
+              </a>
+            </div>
           </div>
         </div>
       </>
