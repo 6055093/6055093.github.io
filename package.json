@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^16.11.0",
     "react-bnb-gallery": "^1.1.8",
+    "react-burger-menu": "^2.6.13",
     "react-dom": "^16.11.0",
     "react-grid-gallery": "^0.5.5",
     "react-icons": "^3.8.0",
