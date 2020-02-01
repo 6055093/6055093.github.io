@@ -10,7 +10,9 @@ class Contact extends Component {
       <div id="contact" className="contact-wrapper">
         <div className="contact-container">
           <div className="contact-info">
+          
             <div className="contact-head">Contact</div>
+            <address>
             <div>
               <a href="tel:+15149232335">
                 <span style={{ fontWeight: 'bolder' }}>téléphone:</span>
@@ -19,11 +21,14 @@ class Contact extends Component {
             </div>
             <br />
             <div>
-              <a href="nathalie_081@msn.com">
+              
+              <a href="mailto:nathalie_081@msn.com">
                 <span style={{ fontWeight: 'bolder' }}>e-mail:</span>
                 <br /> nathalie_081@msn.com
               </a>
+              
             </div>
+            </address>
           </div>
           <div className="contact-map">
             {

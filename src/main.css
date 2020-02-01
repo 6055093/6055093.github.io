@@ -373,9 +373,9 @@ a {
 }
 .chalet-description-button {
   display: inline-block;
-  padding: 1vw 1.5vw;
+  padding: 13px 17px;
   border: none;
-  margin: 1vw 0em 0em 0px;
+  margin: 10px 2em 2em 0px;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
@@ -384,7 +384,7 @@ a {
   color: white;
   text-align: center;
   transition: all 0.2s;
-  font-size: 1.1vw;
+  font-size: 13px;
   font-weight: 600;
 }
 .chalet-description-button a {
@@ -434,6 +434,7 @@ a {
   grid-template-rows: auto;
   height: 100%;
   width: 100%;
+  padding-left: 15px;
 }
 .image-gallery:fullscreen {
   display: flex !important;
