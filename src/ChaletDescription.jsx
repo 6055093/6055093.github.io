@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import ImageGallery from './Gallery.jsx';
 import { IconContext } from 'react-icons';
-import { MdGroup, MdLocalParking, MdSmokingRooms } from 'react-icons/md';
+import {
+  MdGroup,
+  MdLocalParking,
+  MdSmokingRooms,
+} from 'react-icons/md';
 import {
   GiClothespin,
   GiCampfire,
@@ -134,11 +138,14 @@ class ChaletsDescription extends Component {
                     </div>
                   </IconContext.Provider>
                   <div className="chlt-desc-btn-wrap">
-                    <button className="chalet-description-button">
-                      <a target="_blank" href={this.props.chalet.source}>
+                    <a
+                      target="_blank"
+                      href={this.props.chalet.source}
+                    >
+                      <button className="chalet-description-button">
                         RESERVEZ EN LIGNE
-                      </a>
-                    </button>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
