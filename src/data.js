@@ -194,6 +194,7 @@ export const initialChalets = [
   {
     id: 3,
     title: 'Le Paresseux',
+    source: 'https://fr.airbnb.ca/rooms/42172743',
     thumbnailDescription:
       "Chalet douillet en pleine nature, parfait autant pour les familles, que les couples ou entre amis. Situé près de Magog et à moins de 5 minutes du Mont Orford. Une tonne d'activités s'offre à vous pendant les 4 saisons: spectacles, croisières, trains, restaurants, randonnées, pédalos, vignobles, boutiques, ski, escalade, spas, glissade sur neige, etc.",
     chaletDescription: [
