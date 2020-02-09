@@ -93,7 +93,11 @@ class ChaletsDescription extends Component {
                           <span>
                             <GiCampfire /> Feu Exterieur
                           </span>
-                        ) : null}
+                        ) : (
+                          <span>
+                            <GiCampfire /> Aucun Feu Exterieur
+                          </span>
+                        )}
                       </h3>
                       <h3 className="spec-icons">
                         {specs.hasWasher ? (

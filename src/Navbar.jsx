@@ -7,19 +7,19 @@ class Navbar extends Component {
   }
 
   myFunction = () => {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "nav-links-container") {
-      x.className += " responsive";
+    var x = document.getElementById('myTopnav');
+    if (x.className === 'nav-links-container') {
+      x.className += ' responsive';
     } else {
-      x.className = "nav-links-container";
+      x.className = 'nav-links-container';
     }
-  }
+  };
 
   render() {
     return (
       <>
         <div id="top" className="navbar-wrapper">
-          <div  className="navbar">
+          <div className="navbar">
             <div className="nav-logo-container">
               <NavLink to={'/#top'}>
                 <img
@@ -30,23 +30,30 @@ class Navbar extends Component {
               </NavLink>
             </div>
             <div className="nav-links-container-wrapper">
-            <div id="myTopnav" className="nav-links-container">
-              <NavLink className="nav-links" to={'/#chalets'}>
-                Les Chalets
-              </NavLink>
-              <NavLink className="nav-links" to={'/#a-propos'}>
-                À propos
-              </NavLink>
-              <NavLink className="nav-links" to={'/#contact'}>
-                Contact
-              </NavLink>
-              <a className="nav-links nav-button" href="tel:+15149232335">
-                514-923-2335
-              </a>
-              <a href="javascript:void(0);" class="hamburger-icon" onClick={this.myFunction}>
-                <i class="fa fa-bars"></i>
-              </a>
-            </div>
+              <div id="myTopnav" className="nav-links-container">
+                <NavLink className="nav-links" to={'/#chalets'}>
+                  Les Chalets
+                </NavLink>
+                <NavLink className="nav-links" to={'/#a-propos'}>
+                  À propos
+                </NavLink>
+                <NavLink className="nav-links" to={'/#contact'}>
+                  Contact
+                </NavLink>
+                <a
+                  className="nav-links nav-button"
+                  href="tel:+15149232335"
+                >
+                  514-923-2335
+                </a>
+                <a
+                  href="javascript:void(0);"
+                  className="hamburger-icon"
+                  onClick={this.myFunction}
+                >
+                  <i className="fa fa-bars"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>

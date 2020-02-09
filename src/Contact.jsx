@@ -10,24 +10,25 @@ class Contact extends Component {
       <div id="contact" className="contact-wrapper">
         <div className="contact-container">
           <div className="contact-info">
-          
             <div className="contact-head">Contact</div>
             <address>
-            <div>
-              <a href="tel:+15149232335">
-                <span style={{ fontWeight: 'bolder' }}>téléphone:</span>
-                <br /> 514-923-2335
-              </a>
-            </div>
-            <br />
-            <div>
-              
-              <a href="mailto:nathalie_081@msn.com">
-                <span style={{ fontWeight: 'bolder' }}>e-mail:</span>
-                <br /> nathalie_081@msn.com
-              </a>
-              
-            </div>
+              <div>
+                <a href="tel:+15149232335">
+                  <span style={{ fontWeight: 'bolder' }}>
+                    téléphone:
+                  </span>
+                  <br /> 514-923-2335
+                </a>
+              </div>
+              <br />
+              <div>
+                <a href="mailto:nathalie_081@msn.com">
+                  <span style={{ fontWeight: 'bolder' }}>
+                    e-mail:
+                  </span>
+                  <br /> nathalie_081@msn.com
+                </a>
+              </div>
             </address>
           </div>
           <div className="contact-map">
@@ -38,9 +39,9 @@ class Contact extends Component {
                 }
                 width={'100%'}
                 height={'250px'}
-                frameborder={'0'}
+                frameBorder={'0'}
                 style={{ border: '0' }}
-                allowfullscreen={''}
+                allowFullScreen={''}
               ></iframe>
             }
           </div>
