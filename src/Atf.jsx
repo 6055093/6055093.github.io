@@ -11,9 +11,9 @@ class Atf extends Component {
   render() {
     return (
       <div className="atf-container">
-        <video autoPlay muted loop id="myVideo">
+        {/* <video autoPlay muted loop id="myVideo">
           <source src={video} type="video/mp4" />
-        </video>
+        </video> */}
         <div className="atf-sub-container">
           <h1 className="slogan">
             Le chalet de vos rêves

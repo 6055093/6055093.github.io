@@ -88,7 +88,7 @@ a {
   background-color: black;
 }
 .atf-container {
-  /* background-image: url('./images/Window-Snow.mp4'); */
+  background-image: url('./images/bright-color-dark-2170232.jpg');
   background-size: cover;
   height: 90vh;
   overflow: hidden;
@@ -96,13 +96,13 @@ a {
   align-items: center;
   justify-content: center;
 }
-#myVideo {
+/* #myVideo {
   position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-}
+} */
 .atf-sub-container {
   display: flex;
   align-items: center;
@@ -110,13 +110,12 @@ a {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   text-align: center;
   padding: 25px;
   font-size: 17px;
   z-index: 97;
-  position: absolute;
   top: 0;
 }
 .slogan {
@@ -589,7 +588,6 @@ h3 {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center;
     padding: 25px;
